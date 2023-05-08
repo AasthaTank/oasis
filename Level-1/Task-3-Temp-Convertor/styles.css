@@ -8,7 +8,7 @@ body{
     place-items: center;
     background: url('back-img.jpg');
     color:#313030;
-    transition:0.5s;
+    transition:0.5s; 
 }
 
 h1{
