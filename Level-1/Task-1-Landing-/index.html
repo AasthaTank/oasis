@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TrAveler's</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+<style type="text/css">
+    *{margin:0; padding:0; box-sizing: border-box ;}
+    header{
+        width:100%;
+        height:100vh;
+        background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('back-img.jpg ');
+        background-size: cover;
+        font-family: sans-serif;
+    }
+    nav{
+                width:100%;
+                height:100px;
+                color:white;
+                display:flex; 
+                justify-content: space-around;
+                align-items: center;
+            }
+
+    .logo{
+        font-size: 2em;
+        letter-spacing: 2px;
+        color:indianred
+    }
+
+    .menu a{
+        text-decoration: none;
+        color: white;
+        padding:10px 20px;
+        font-size: 20px;
+        position: relative;
+    }
+
+    .menu a:before{
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        width:0%;
+        height:100%;
+        border-bottom:2px solid indianred;
+        transition:0.4s linear;
+    }
+
+    .menu a:hover:before{
+        width:90%;
+    }
+
+    .register a{
+        text-decoration: none;
+        color: white;
+        padding:10px 20px;
+        font-size:20px;
+        background: indianred;
+        border-radius: 8px;
+    }
+
+    .register a:hover{
+        background: transparent;
+        border:1px solid indianred;
+    }
+
+    .h-text{
+        max-width: 650px;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        text-align: center;
+        color: white;
+    }
+
+    .h-text span{
+        letter-spacing:5px;
+    }
+
+    .h-text h1{
+        font-size:3.5em;
+    }
+
+    .h-text a{
+        text-decoration: none;
+        background:indianred ;
+        color:white;
+        padding:10px 20px;
+        letter-spacing: 5px;
+        transition:0.4s;
+    }
+
+    .h-text a:hover{
+        background: transparent;
+        border:1px solid indianred;
+    }
+
+    #wrapper{
+        height:100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .container{
+        height:100%;
+        max-width: 1200px;
+        margin:0 auto;
+        padding:20px;
+    }
+
+    .container h1{
+        margin:20px 0;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 3rem;
+    }
+
+    .gallery{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card{
+        width:32%;
+        position:relative;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        overflow:hidden;
+        
+    }
+
+    .card img{
+        height:100%;
+        width:100%;
+        filter:grayscale(100%);
+        box-shadow: 0 0 20px #333;
+        object-fit:cover;
+    }
+    .card:hover{
+        transform: scale(1.03);
+        transition:0.5s;
+        filter: drop-shadow(0 0 10px #333);
+
+    }
+
+    .card:hover img{
+        filter:grayscale(0%);
+    }
+
+    .card figcaption{
+        position:absolute; /* nearest anssestor should be non static*/
+        bottom:0;
+        left:0;
+        padding:25px;
+        width:100%;
+        height:20%;
+        font-size: 16px;
+        font-weight: 500;
+        color:#fff;
+        opacity:0; /* transparancy full*/
+        border-radius: 0 010px 10px;
+        background:linear-gradient( 0deg,rgba(0,0,0,0,5)0%,rgba(255,255,255,0)100%);
+        transition:0.3s;
+
+    }
+
+    .card:hover figcaption{
+        opacity: 1;
+        transform:scale(1.03);
+    }
+
+    .wrapper1{
+        width:100%;
+        height:100%;
+        background-color: rgb(14, 54, 65);
+        color: #fff;
+        font-family: sans-serif;
+    }
+
+    .container1{
+        padding:10px;
+        margin:10px;
+        display: flex;
+        width:80%;
+        gap:10px;
+        align-items: left;
+        font-family: sans-serif;
+        color:rgb(169, 174, 178)
+    }
+
+    .contactUs{
+        width:50%;
+        height:50%;
+        font-family: sans-serif;
+    }
+
+    h2{
+        color:#fdfdfd   
+    }
+
+
+</style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                TrAveler's
+            </div>
+
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Places</a>
+                <a href="#">Best Offer's</a>
+                <a href="#">Our Sites</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="register">
+                <a href="#">Register</a>
+                 
+            </div>
+        </nav> 
+
+        <section class="h-text">
+            <span>Enjoy</span>
+            <h1>International Travel Agency</h1>
+
+            <br>
+            <a href="#">Book Your Trip</a>
+        </section>
+
+    </header>
+
+    <div id="wrapper">
+
+        <div class="container">
+            <h1>Popular places</h1>
+
+            <div class="gallery">
+
+            <figure class="card">
+                <img src="img1.jpg" alt="">
+                <figcaption>Spiti valley</figcaption>
+            </figure>
+
+            <figure class="card">
+                <img src="img2.jpeg" alt="">
+                <figcaption>Leh Ladakh</figcaption>
+            </figure>
+
+            <figure class="card">
+                <img src="img3.jpeg" alt="">
+                <figcaption>Manali</figcaption>
+            </figure>
+
+            <figure class="card">
+                <img src="img4.jpeg" alt="">
+                <figcaption>Kedarnath</figcaption>
+            </figure>
+
+            <figure class="card">
+                <img src="img5.jpeg" alt="">
+                <figcaption>Maharastra</figcaption>
+            </figure>
+            
+            <figure class="card">
+                <img src="img6.jpeg" alt="">
+                <figcaption>Polo Forest</figcaption>
+            </figure>
+
+            <figure class="card">
+                <img src="img7.jpeg" alt="">
+                <figcaption>Valley Of Flowers</figcaption>
+            </figure>
+
+            <figure class="card">
+                <img src="img8.jpeg" alt="">
+                <figcaption>Har Ki Dun</figcaption>
+            </figure>
+
+            <figure class="card">
+                <img src="img9.jpeg" alt="">
+                <figcaption>Kashmir</figcaption>
+            </figure>
+
+            </div>
+        </div>
+    </div><br>
+
+    <footer>
+        <div class="wrapper1">
+            <div class="container1">
+                <div>
+                    <h2>TrAvelers'</h2><br>
+                    <div>
+                        <p>TrAvelers' is a Non Government Organization, being run by young students for social reformation and building the nation with moral values and ethics.</p>
+                    </div>
+                    <div>
+                        <a class="icons">
+                            <a href="#">
+                                <i class="fa-brands fa-facebook"></i></a>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i></a>
+                            <a href="#">
+                                <i class="fa-brands fa-youtube"></i></a>
+                            <a href="#">
+                                <i class="fa-brands fa-twitter"></i></a>
+                            <a href="#">
+                                <i class="fa-regular fa-location-dot"></i></a>
+                            <a href="#">
+                                <i class="fa-brands fa-whatsapp"></i></a>
+                        </a>
+                    </div>
+                </div><br>
+                
+                <div class="contactUs">
+                    <a><h2>Contact Us</h2><br>
+            
+                        <p>Rajkot(Head office)</p>
+                        <p>Morbi bypass, Near bedi, Marwadi University, Rajkot, Gujarat, 360003</p>
+                        <p>Office Timing: 11AM to 8PM</p>
+                        
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
